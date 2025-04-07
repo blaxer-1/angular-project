@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h1>Nouveau film</h1>
+    <div class="d-flex flex-column w-50">
+        <label for="title">Titre</label>
+        <input type="text" id="title" name="title" [(ngModel)]="movie.title" />
+        <label for="director">Réalisateur</label>
+        <input type="text" id="director" name="director" [(ngModel)]="movie.director" />
+        <label for="releaseDate">Date de sortie</label>
+        <input type="date" id="releaseDate" name="releaseDate" [(ngModel)]="movie.releaseDate" />
+        <label for="synopsis">Synopsis</label>
+        <input type="text" id="synopsis" name="synopsis" [(ngModel)]="movie.synopsis" />
+        <button class="btn btn-warning mt-3" (click)=addMovie()>Ajouter</button>
+    </div>
+</div>
