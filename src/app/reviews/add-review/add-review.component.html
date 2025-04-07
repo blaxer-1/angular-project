@@ -1,1 +1,42 @@
-<p>add-review works!</p>
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-outline-secondary" (click)="myReviews()">Mes avis</button>
+    </div>
+
+    <div class="card shadow rounded-4 p-4">
+        <h2 class="mb-4 text-center text-primary">Laisser un nouvel avis</h2>
+
+        <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="note" class="form-label fw-semibold">Note</label>
+                <select name="noteSelect" id="note" class="form-select" [formControl]="reviewForm.controls.rating">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="texte" class="form-label fw-semibold">Votre avis</label>
+                <input type="text" id="texte" name="texte" class="form-control" placeholder="Partagez votre ressenti..."
+                    [formControl]="reviewForm.controls.text">
+            </div>
+
+            <div class="mb-4">
+                <label for="film" class="form-label fw-semibold">Film à noter</label>
+                <select name="film" id="film" class="form-select" [formControl]="reviewForm.controls.movieId">
+                    @for (movie of movies; track movie.id) {
+                        <option value="{{movie.id}}">{{movie.title}}</option>
+                    }
+                </select>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-warning btn-lg rounded-pill">Ajouter mon avis</button>
+            </div>
+        </form>
+    </div>
+</div>
