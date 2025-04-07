@@ -1,0 +1,98 @@
+[
+    {
+      "id": 1,
+      "title": "Titanic",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["19:15", "21:30"]
+        },
+        {
+          "date": "8 avril 2025",
+          "version": "VO",
+          "times": ["12:15", "22:30"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Avatar",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["14:00", "18:00"]
+        },
+        {
+          "date": "9 avril 2025",
+          "version": "VO",
+          "times": ["16:30", "20:45"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Dirty Dancing",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["15:30", "19:45"]
+        },
+        {
+          "date": "8 avril 2025",
+          "version": "VO",
+          "times": ["13:00", "21:00"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Eiffel",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["11:00", "17:30"]
+        },
+        {
+          "date": "9 avril 2025",
+          "version": "VO",
+          "times": ["14:15", "20:00"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Les Blues Brothers",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["16:00", "22:00"]
+        },
+        {
+          "date": "9 avril 2025",
+          "version": "VO",
+          "times": ["12:30", "18:45"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Raiponce",
+      "seances": [
+        {
+          "date": "8 avril 2025",
+          "version": "VF",
+          "times": ["10:30", "14:45"]
+        },
+        {
+          "date": "8 avril 2025",
+          "version": "VO",
+          "times": ["16:15", "19:00"]
+        }
+      ]
+    }
+  ]

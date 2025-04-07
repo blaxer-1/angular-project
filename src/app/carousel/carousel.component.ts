@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, Input, inject} from '@angular/core';
 import {CommonModule, DatePipe} from "@angular/common";
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {MoviesService} from "../services/movies.service";
@@ -13,6 +13,8 @@ import {Movie} from "../models/movie";
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent {
+
+  @Input({ required: true }) title! : string
 
   private readonly moviesService = inject(MoviesService)
 

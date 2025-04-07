@@ -1,0 +1,36 @@
+<div class="card shadow m-4" style="width: 18rem; min-height: 30rem">
+    @if(movie.image) {
+      <img [src]="'http://localhost:8080/movies/'+movie.id+'/image'" class="card-img-top" alt="">
+    }
+    <div class="card-content d-flex">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+        <label class="note">Note: {{movie.rate}}</label>
+      </div>
+      <div class="les-seances">
+        <div class="cinéma">UGC Ciné Cité Les Halles</div>
+        <div class="seance-time">8 avril 2025 - En VF</div>
+        <div class="seances">
+            <button class="btn btn-seance">
+                <div class="seance-time">19:15</div>
+                <div class="seance-action">Réserver</div>
+            </button>
+            <button class="btn btn-seance">
+                <div class="seance-time">21:30</div>
+                <div class="seance-action">Réserver</div>
+            </button>
+        </div>
+        <div class="seance-time">8 avril 2025 - En VO</div>
+        <div class="seances">
+            <button class="btn btn-seance">
+                <div class="seance-time">12:15</div>
+                <div class="seance-action">Réserver</div>
+            </button>
+            <button class="btn btn-seance">
+                <div class="seance-time">22:30</div>
+                <div class="seance-action">Réserver</div>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -20,4 +20,6 @@ export class HomeComponent {
   private readonly moviesService = inject(MoviesService)
 
   movies$: Observable<Movie[]> = this.moviesService.getMovies()
+  title = "À l'affiche"
+  title1 = "Les plus trendy"
 }
