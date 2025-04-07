@@ -1,0 +1,17 @@
+<div
+    class="parent container d-flex justify-content-center align-items-center h-100 mt-5 p-5 border border-2 border-warning rounded-3 shadow-lg">
+    <div class="child">
+        <h1 class="text-center">Connecte-toi !</h1>
+        <p class="fst-italic text-center">En 1 clic.</p>
+
+        <!-- LOGIN FORM -->
+        <form class="mt-1 d-flex flex-column" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <label for="email mt-2">Email</label>
+            <input class="form-control mt-1"  id="email" type="text" [formControl]="userForm.controls.email">
+        
+            <button class="btn btn-warning signup mt-4" type="submit" [disabled]="!userForm.valid">Se connecter</button>
+        </form>
+
+        <p class="col-12 text-center mt-3">Pas de compte ?<a style="margin-left: 10px; text-decoration: none; color: #fecc00;" routerLink="/register">Inscris-toi !</a></p>
+    </div>
+</div>

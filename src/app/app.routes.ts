@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { AddMovieComponent } from './movies/add-movie/add-movie.component';
-import { UpdateMovieComponent } from './movies/update-movie/update-movie.component';
 import { RegisterComponent } from './user/register/register.component';
 import { LoginComponent } from './user/login/login.component';
 import { AccountComponent } from './user/account/account.component';
@@ -13,7 +12,7 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'movies', component: MoviesComponent },
     { path: 'add-movie', component: AddMovieComponent },
-    { path: 'add-movie/:id', component: UpdateMovieComponent },
+    { path: 'add-movie/:id', component: AddMovieComponent },
     { path: "register", component: RegisterComponent },
     { path: 'register/:id', component: RegisterComponent },
     { path: 'login', component: LoginComponent },

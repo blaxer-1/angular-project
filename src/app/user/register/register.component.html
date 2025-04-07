@@ -1,0 +1,22 @@
+<div
+    class="parent container d-flex justify-content-center align-items-center h-100 mt-5 p-5 border border-2 border-warning rounded-3 shadow-lg">
+    <div class="child">
+        <h1 class="text-center">Passioné(e) de cinéma ?</h1>
+        <h1 class="text-center">Inscris-toi !</h1>
+        <p class="fst-italic text-center">Et rejoins une vraie communauté.</p>
+
+        <!-- REGISTER FORM -->
+        <form class="mt-1 d-flex flex-column" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <label for="name mt-2">Prénom</label>
+            <input class="form-control mt-1"  id="firstname" type="text" [formControl]="userForm.controls.firstName">
+            <label for="name mt-2">Nom de famille</label>
+            <input class="form-control mt-1"  id="name" type="text" [formControl]="userForm.controls.lastName">
+            <label for="age mt-2">Age</label>
+            <input class="form-control mt-1"  id="age" type="number" [formControl]="userForm.controls.age">
+            <label for="name mt-2">Email</label>
+            <input class="form-control mt-1"  id="name" type="text" [formControl]="userForm.controls.email">
+        
+            <button class="btn btn-warning signup mt-4" type="submit" [disabled]="!userForm.valid">M'inscrire</button>
+        </form>
+    </div>
+</div>
