@@ -1,0 +1,56 @@
+.seances{
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  .card-body {
+    flex: 1;
+  }
+  
+  .seances {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .btn-seance {
+    border-color: #ff6f61;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #f5a623;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-seance:hover {
+    background-color: #d48f20;
+    border-color: #f5a623;
+  }
+  
+  .btn-seance:active {
+    background-color: #cc4e45;
+    border-color: #cc4e45;
+  }
+
+  .seance-time {
+    font-weight: bold;
+  }
+  
+  .seance-action {
+    font-size: 0.8rem;
+  }
+
+  .cinéma {
+    font-size: 1rem;
+  }

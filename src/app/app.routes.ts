@@ -19,4 +19,5 @@ export const routes: Routes = [
     { path: 'account/:id', component: AccountComponent},
     { path: 'reviews/:id', component: ReviewsComponent },
     { path: 'add-review/:id', component: AddReviewComponent },
+    { path: 'seance', component: SeanceComponent}
 ];

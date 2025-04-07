@@ -1,0 +1,11 @@
+<div class="menu-seance">
+  <label for="cinema">Choisissez votre cinéma:</label>
+  <select id="cinema" (change)="onCinemaChange($event)">
+    <option *ngFor="let cinema of cinemas" [value]="cinema">{{ cinema }}</option>
+  </select>
+</div>
+
+@for (movie of movies$ | async; track movie.id) 
+{
+    <app-seance-movie [movie]="movie"></app-seance-movie>
+}
