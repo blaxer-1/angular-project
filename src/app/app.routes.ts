@@ -7,6 +7,7 @@ import { LoginComponent } from './user/login/login.component';
 import { AccountComponent } from './user/account/account.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AddReviewComponent } from './reviews/add-review/add-review.component';
+import { SeanceComponent } from './seance/seance.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
