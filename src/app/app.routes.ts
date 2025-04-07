@@ -7,9 +7,10 @@ import { LoginComponent } from './user/login/login.component';
 import { AccountComponent } from './user/account/account.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AddReviewComponent } from './reviews/add-review/add-review.component';
+import { CarouselComponent} from "./carousel/carousel.component";
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent},
     { path: 'movies', component: MoviesComponent },
     { path: 'add-movie', component: AddMovieComponent },
     { path: 'add-movie/:id', component: AddMovieComponent },

@@ -1,0 +1,16 @@
+<h1 style="margin-left: 30px;">À l'affiche</h1>
+<div class="carousel-container">
+  <ngx-slick-carousel class="carousel"
+                      #slickModal="slick-carousel"
+                      [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let movie of movies$ | async" class="slide">
+      <div class="card shadow m-4" style="width: 18rem; min-height: 2rem;">
+        <img *ngIf="movie.image" [src]="'http://localhost:8080/movies/' + movie.id + '/image'" class="card-img-top" width="300" height="600" alt="{{ movie.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <label class="note">⭐ Note: {{ movie.rate }} | {{movie.releaseDate | date:'yyyy'}}</label>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

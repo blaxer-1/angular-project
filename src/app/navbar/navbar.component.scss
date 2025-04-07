@@ -1,0 +1,45 @@
+.navbar {
+    background-color: #ffc800 !important; /* Jaune vif */
+    padding: 1rem 2rem;
+    height: 80px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black !important;
+    position: relative;
+  }
+  
+  .navbar-brand::after {
+    content: 'CINÉ';
+    color: white;
+    margin-left: 0.3rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: black !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #333 !important;
+  }
+  
+  .ms-auto .nav-link:nth-child(1) {
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .ms-auto .nav-link:nth-child(2) {
+    background-color: black;
+    color: white !important;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  

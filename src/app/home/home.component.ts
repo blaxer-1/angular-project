@@ -3,7 +3,7 @@ import { MoviesService } from '../services/movies.service';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie';
 import { AsyncPipe } from '@angular/common';
-import { MovieComponent } from "./movie/movie.component";
+import { CarouselComponent } from '../carousel/carousel.component';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { MovieComponent } from "./movie/movie.component";
   standalone: true,
   imports: [
     AsyncPipe,
-    MovieComponent
+    CarouselComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
