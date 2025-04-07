@@ -9,6 +9,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { AddReviewComponent } from './reviews/add-review/add-review.component';
 import { GraphesComponent } from './graphes/graphes.component';
 import { MapComponent } from './map/map.component';
+import { SeanceComponent } from './seance/seance.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'reviews/:id', component: ReviewsComponent },
     { path: 'add-review/:id', component: AddReviewComponent },
     { path: "graphes", component: GraphesComponent},
-    { path: "map", component: MapComponent}
+    { path: "map", component: MapComponent},
+    { path: 'seance', component: SeanceComponent}
 ];
 
