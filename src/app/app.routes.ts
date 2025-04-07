@@ -10,3 +10,4 @@ export const routes: Routes = [
     { path: 'add-movie', component: AddMovieComponent},
     { path: 'add-movie/:id', component: UpdateMovieComponent},
 ];
+
