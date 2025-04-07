@@ -26,7 +26,7 @@ export class AddMovieComponent {
   movieForm = new FormGroup({
       title: new FormControl('', [Validators.required, titleValidator()]),
       director: new FormControl('', [Validators.required, directorValidator()]),
-      releaseDate: new FormControl(new Date(), [Validators.required, releaseDateValidator()]),
+      releaseDate: new FormControl('', [Validators.required, releaseDateValidator()]),
       synopsis: new FormControl('', [Validators.minLength(30)]),
     }
   );
@@ -36,7 +36,7 @@ export class AddMovieComponent {
 
   ngOnInit(): void {
     if (this.route.snapshot.params['id']) {
-      this.moviesService.getMovie(this.route.snapshot.params['id']).subscribe(movie => {
+      this.moviesService.getMovie(this.route.snapshot.params['id']).subscribe((movie: Movie) => {
         this.id = movie.id;
         this.rate = movie.rate;
         this.image = movie.image;
@@ -44,8 +44,8 @@ export class AddMovieComponent {
         this.movieForm.patchValue({
           title: movie.title,
           director: movie.director,
-          releaseDate: movie.releaseDate,
           synopsis: movie.synopsis,
+          releaseDate: new Date(movie.releaseDate).toISOString().split('T')[0],
         });
       });
     }
@@ -57,7 +57,7 @@ export class AddMovieComponent {
     const movie: Movie = {
       title: this.movieForm.controls["title"].value!,
       director: this.movieForm.controls["director"].value!,
-      releaseDate: this.movieForm.controls["releaseDate"].value!,
+      releaseDate: new Date(this.movieForm.controls["releaseDate"].value!),
       synopsis: this.movieForm.controls["synopsis"].value!,
       id: this.id,
       rate: this.rate,
