@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../../models/movie';
 import { MoviesService } from '../../services/movies.service';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update-movie',
@@ -14,8 +15,9 @@ import { FormsModule } from '@angular/forms';
 export class UpdateMovieComponent {
   private readonly moviesService = inject(MoviesService)
   private readonly router = inject(Router)
+  private readonly toaster = inject(ToastrService)
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   movie: Movie = {
     title: '',
@@ -29,13 +31,20 @@ export class UpdateMovieComponent {
 
   ngOnInit(): void {
     this.moviesService.getMovie(this.route.snapshot.params['id']).subscribe(movie => {
-      this.movie = {...movie, releaseDate: new Date(movie.releaseDate) };
+      this.movie = { ...movie, releaseDate: new Date(movie.releaseDate) };
     });
   }
 
   updateMovie(): void {
     this.moviesService.updateMovie(this.movie).subscribe(
-        () => this.router.navigate(['/movies'])
+      () => {
+        this.router.navigate(['/movies'])
+        this.toaster.success('Le film a été mis à jour avec succès', 'Succès', {
+          timeOut: 3000,
+          progressBar: true,
+          progressAnimation: 'increasing'
+        });
+      }
     );
- }
+  }
 }

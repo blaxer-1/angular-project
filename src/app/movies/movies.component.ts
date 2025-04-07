@@ -4,6 +4,7 @@ import { MoviesService } from '../services/movies.service';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -21,6 +22,7 @@ export class MoviesComponent {
 
   private readonly moviesService = inject(MoviesService)
   private destroyRef = inject(DestroyRef)
+  private toaster = inject(ToastrService)
 
   movies: Movie[] = [];
   ngOnInit(): void {
@@ -28,8 +30,13 @@ export class MoviesComponent {
   }
 
   deleteMovie(id: number): void {
-    this.moviesService.deleteMovie(id).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() =>
+    this.moviesService.deleteMovie(id).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
       this.movies = this.movies.filter(film => film.id !== id)
-    );
+      this.toaster.success('Le film a été supprimé avec succès', 'Succès', {
+        timeOut: 3000,
+        progressBar: true,
+        progressAnimation: 'increasing'
+      });
+    });
   }
 }
