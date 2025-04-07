@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Movie, Seance } from '../../models/movie';
+import { Movie } from '../../models/movie';
 
 @Component({
   selector: 'app-seance-movie',
